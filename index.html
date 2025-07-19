@@ -21,18 +21,40 @@
       color: #2c3e50;
     }
 
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #e3f2f1;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 24px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
+ header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #e3f2f1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* ruimte tussen logo en nav */
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header-image-round {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: 12px; /* ruimte links van de ronde afbeelding */
+}
+
 
     .logo, .header-image {
       height: 55px;
@@ -130,45 +152,30 @@
         order: -1;
       }
     }
-    .header-image-round {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.header-image-round:hover {
-  transform: scale(1.05);
-}
 
     .reverse {
   flex-direction: row-reverse;
 }
 
-    .header-image-round {
-  margin-right: 12px;
-}
-
+  
 
 
   </style>
-</head>
-<body>
-  <header>
-  <img src="logo.png" alt="Logo" class="logo" />
-  <nav>
-    <a href="#over-mij">Over mij</a>
-    <a href="#diensten">Diensten</a>
-    <a href="#contact">Contact</a>
-    <a href="#inspiratiebronnen">Inspiratiebronnen</a>
-  </nav>
-  <!-- Klikbare ronde afbeelding die naar #contact scrolt -->
+<header>
+  <div class="header-left">
+    <img src="logo.png" class="logo" />
+    <nav>
+      <a href="#over-mij">Over mij</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#contact">Contact</a>
+      <a href="#inspiratiebronnen">Inspiratiebronnen</a>
+    </nav>
+  </div>
   <a href="#contact">
     <img src="header-afbeelding.png" alt="Contact knop" class="header-image-round" />
   </a>
 </header>
+
 
   <div class="spacer"></div>
 
