@@ -1,122 +1,168 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Website</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mijn Website</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #f8f8f8;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
 
-        .logo, .header-image {
-            height: 50px;
-            width: auto;
-        }
+    .logo,
+    .header-image {
+      height: 50px;
+      width: auto;
+    }
 
-        nav {
-            display: flex;
-            gap: 30px;
-        }
+    nav {
+      display: flex;
+      gap: 30px;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 20px;
-        }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 20px;
+    }
 
-        section {
-            padding: 100px 20px 60px;
-            max-width: 900px;
-            margin: 0 auto;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    section {
+      padding: 100px 20px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
 
-        /* Specifieke aanpassing voor de welkom-sectie */
-        #welkom {
-            justify-content: flex-start;
-            padding-top: 120px; /* Voldoende ruimte onder de vaste header */
-            min-height: calc(100vh - 80px); /* Zodat hij mooi uitkomt in beeld */
-        }
+    section:nth-child(even) {
+      background-color: #f2f2f2;
+    }
 
-        section:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+    .text-block {
+      flex: 1;
+    }
 
-        h2 {
-            margin-top: 0;
-        }
+    .image-block {
+      flex: 1;
+    }
 
-        .spacer {
-            height: 80px;
-        }
-    </style>
+    .image-block img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #welkom {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 120px;
+      min-height: calc(100vh - 80px);
+      text-align: center;
+    }
+
+    .spacer {
+      height: 80px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <nav>
+      <a href="#over-mij">Over mij</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#contact">Contact</a>
+      <a href="#inspiratiebronnen">Inspiratiebronnen</a>
+    </nav>
+    <img src="header-afbeelding.png" alt="Header Afbeelding" class="header-image" />
+  </header>
 
-    <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <nav>
-            <a href="#over-mij">Over mij</a>
-            <a href="#diensten">Diensten</a>
-            <a href="#contact">Contact</a>
-            <a href="#inspiratiebronnen">Inspiratiebronnen</a>
-        </nav>
-        <img src="header-afbeelding.png" alt="Header Afbeelding" class="header-image">
-    </header>
+  <div class="spacer"></div>
 
-    <div class="spacer"></div>
+  <section id="welkom">
+    <h2>Welkom</h2>
+    <p>
+      Leuk dat je er bent! Op deze website vind je informatie over wie ik ben, wat ik doe, en waar ik mijn inspiratie vandaan haal.
+    </p>
+  </section>
 
-    <section id="welkom">
-        <h2>Welkom</h2>
-        <p>Leuk dat je er bent! Op deze website vind je informatie over wie ik ben, wat ik doe, en waar ik mijn inspiratie vandaan haal. Scroll gerust verder!</p>
-    </section>
+  <section id="over-mij">
+    <div class="text-block">
+      <h2>Over mij</h2>
+      <p>
+        Ik ben een creatieve professional met een passie voor design, technologie en mensen helpen hun visie tot leven te brengen.
+      </p>
+    </div>
+    <div class="image-block">
+      <img src="afbeelding-over-mij.jpg" alt="Over mij afbeelding" />
+    </div>
+  </section>
 
-    <section id="over-mij">
-        <h2>Over mij</h2>
-        <p>Welkom! Ik ben een creatieve professional met een passie voor design, technologie en mensen helpen hun visie tot leven te brengen.</p>
-    </section>
+  <section id="diensten">
+    <div class="text-block">
+      <h2>Diensten</h2>
+      <p>
+        Ik bied diverse diensten aan zoals webdesign, branding en strategisch advies. Neem contact op voor een op maat gemaakt voorstel.
+      </p>
+    </div>
+    <div class="image-block">
+      <img src="afbeelding-diensten.jpg" alt="Diensten afbeelding" />
+    </div>
+  </section>
 
-    <section id="diensten">
-        <h2>Diensten</h2>
-        <p>Ik bied diverse diensten aan zoals webdesign, branding en strategisch advies. Neem contact op voor een op maat gemaakt voorstel.</p>
-    </section>
+  <section id="contact">
+    <div class="text-block">
+      <h2>Contact</h2>
+      <p>
+        Je kunt me bereiken via e-mail op <strong>voorbeeld@email.nl</strong> of via het contactformulier op deze pagina.
+      </p>
+    </div>
+    <div class="image-block">
+      <img src="afbeelding-contact.jpg" alt="Contact afbeelding" />
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Je kunt me bereiken via e-mail op <strong>voorbeeld@email.nl</strong> of via het contactformulier op deze pagina.</p>
-    </section>
-
-    <section id="inspiratiebronnen">
-        <h2>Inspiratiebronnen</h2>
-        <p>Mijn inspiratie haal ik uit kunst, natuur, technologie en de verhalen van anderen. Ik deel hier regelmatig mijn favoriete bronnen.</p>
-    </section>
-
+  <section id="inspiratiebronnen">
+    <div class="text-block">
+      <h2>Inspiratiebronnen</h2>
+      <p>
+        Mijn inspiratie haal ik uit kunst, natuur, technologie en de verhalen van anderen. Ik deel hier regelmatig mijn favoriete bronnen.
+      </p>
+    </div>
+    <div class="image-block">
+      <img src="afbeelding-inspiratie.jpg" alt="Inspiratie afbeelding" />
+    </div>
+  </section>
 </body>
 </html>
+
 
 
 
