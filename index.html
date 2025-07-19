@@ -1,94 +1,101 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Talent 2 Teamoach – Sport & Gezondheid</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #1e90ff;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-        }
-        .services {
-            background: #e0f7fa;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coach voor Coaches</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #0d1b2a;
+      padding: 20px 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e0aaff;
+    }
+
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+
+    #home {
+      background-color: #e0e1dd;
+    }
+
+    #about {
+      background-color: #778da9;
+      color: white;
+    }
+
+    #services {
+      background-color: #415a77;
+      color: white;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    .spacer {
+      height: 80px; /* ruimte onder de navbar */
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Talent 2 Teamcoach</h1>
-        <p>Jouw persoonlijke gids naar sportief succes!</p>
-    </header>
-
+  <header>
     <nav>
-        <a href="#over">Over mij</a>
-        <a href="#diensten">Diensten</a>
-        <a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">Over Mij</a>
+      <a href="#services">Diensten</a>
     </nav>
+  </header>
 
-    <section id="over">
-        <h2>Over mij</h2></p>
-    </section>
+  <div class="spacer"></div>
 
-    <section class="services" id="diensten">
-        <h2>Diensten</h2>
-        <ul>
-            <li>Persoonlijke trainingsschema's</li>
-            <li>Voedingsadvies op maat</li>
-            <li>1-op-1 coaching sessies</li>
-            <li>Online trainingen & workshops</li>
-        </ul>
-    </section>
+  <section id="home">
+    <h1>Welkom bij Coach voor Coaches</h1>
+    <p>Ik help sportcoaches om het beste uit hun team te halen, door middel van coaching, training en strategie.</p>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Interesse in coaching of een gratis intakegesprek? Neem contact op!</p>
-        <p>Email: <a href="mailto:coachjeroen@example.com">coachjeroen@example.com</a></p>
-        <p>Telefoon: 06-12345678</p>
-    </section>
+  <section id="about">
+    <h2>Over Mij</h2>
+    <p>Met meer dan 10 jaar ervaring in de sportwereld help ik coaches met het ontwikkelen van hun leiderschap, communicatie en teamdynamiek.</p>
+  </section>
 
-    <footer>
-        &copy; 2025 Coach Jeroen – Alle rechten voorbehouden
-    </footer>
+  <section id="services">
+    <h2>Diensten</h2>
+    <ul>
+      <li>1-op-1 coaching voor sportcoaches</li>
+      <li>Workshops over teamontwikkeling</li>
+      <li>Analyse en begeleiding bij teamprestaties</li>
+    </ul>
+  </section>
 
 </body>
 </html>
