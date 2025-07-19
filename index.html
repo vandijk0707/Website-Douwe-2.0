@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mijn Website</title>
 
-  <!-- Professioneel Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
@@ -36,7 +35,7 @@
       align-items: center;
       justify-content: space-between;
       z-index: 1000;
-      gap: 20px;
+      height: 120px;
     }
 
     .header-left {
@@ -46,15 +45,16 @@
     }
 
     .logo {
-      height: 100px; /* 1.2x groter dan origineel (55px) */
+      height: 100px;
       width: auto;
     }
 
     nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
       gap: 30px;
-      flex-grow: 1;
-      justify-content: center;
     }
 
     nav a {
@@ -71,7 +71,7 @@
     }
 
     .header-image-round {
-      height: 100px; /* 2x groter dan origineel (50px) */
+      height: 100px;
       width: 100px;
       border-radius: 50%;
       object-fit: cover;
@@ -85,7 +85,7 @@
     }
 
     .spacer {
-      height: 100px; /* verhoogd voor grotere header */
+      height: 120px;
     }
 
     section {
@@ -134,7 +134,7 @@
       flex-direction: column;
       justify-content: flex-start;
       padding-top: 140px;
-      min-height: calc(100vh - 100px); /* aangepast voor nieuwe headerhoogte */
+      min-height: calc(100vh - 120px);
       text-align: center;
     }
 
@@ -149,6 +149,14 @@
     }
 
     @media (max-width: 900px) {
+      nav {
+        position: static;
+        transform: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
       section {
         flex-direction: column;
         text-align: center;
