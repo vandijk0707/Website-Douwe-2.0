@@ -2,13 +2,18 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mijn Website</title>
 
   <!-- Professioneel Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
+    /* Box sizing voor betere layout */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -21,49 +26,38 @@
       color: #2c3e50;
     }
 
- header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 24px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #e3f2f1;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 12px 24px;
+      background-color: #e3f2f1;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
 
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 30px; /* ruimte tussen logo en nav */
-}
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      max-width: 75%;
+    }
 
-nav {
-  display: flex;
-  gap: 30px;
-}
-
-.header-image-round {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin-left: 12px; /* ruimte links van de ronde afbeelding */
-}
-
-
-    .logo, .header-image {
+    .logo {
       height: 55px;
       width: auto;
+      flex-shrink: 0;
     }
 
     nav {
       display: flex;
       gap: 30px;
+      flex-wrap: wrap;
+      overflow: hidden;
     }
 
     nav a {
@@ -72,10 +66,31 @@ nav {
       font-weight: 600;
       font-size: 20px;
       transition: color 0.3s;
+      white-space: nowrap;
     }
 
     nav a:hover {
       color: #155d58;
+    }
+
+    .header-image-round {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin-left: 12px;
+      flex-shrink: 0;
+    }
+
+    .header-image-round:hover {
+      transform: scale(1.05);
+    }
+
+    /* Ruimte onder header, zodat content niet eronder verdwijnt */
+    .spacer {
+      height: 80px;
     }
 
     section {
@@ -138,10 +153,6 @@ nav {
       color: #345854;
     }
 
-    .spacer {
-      height: 80px;
-    }
-
     @media (max-width: 900px) {
       section {
         flex-direction: column;
@@ -154,16 +165,15 @@ nav {
     }
 
     .reverse {
-  flex-direction: row-reverse;
-}
-
-  
-
-
+      flex-direction: row-reverse;
+    }
   </style>
+</head>
+<body>
+
 <header>
   <div class="header-left">
-    <img src="logo.png" class="logo" />
+    <img src="logo.png" alt="Logo" class="logo" />
     <nav>
       <a href="#over-mij">Over mij</a>
       <a href="#diensten">Diensten</a>
@@ -176,27 +186,26 @@ nav {
   </a>
 </header>
 
+<div class="spacer"></div>
 
-  <div class="spacer"></div>
+<section id="welkom">
+  <h2>Welkom</h2>
+  <p>
+    Leuk dat je er bent! Op deze website vind je informatie over wie ik ben, wat ik doe, en waar ik mijn inspiratie vandaan haal.
+  </p>
+</section>
 
-  <section id="welkom">
-    <h2>Welkom</h2>
+<section id="over-mij">
+  <div class="text-block">
+    <h2>Over mij</h2>
     <p>
-      Leuk dat je er bent! Op deze website vind je informatie over wie ik ben, wat ik doe, en waar ik mijn inspiratie vandaan haal.
+      Ik ben een creatieve professional met een passie voor design, technologie en mensen helpen hun visie tot leven te brengen.
     </p>
-  </section>
-
-  <section id="over-mij">
-    <div class="text-block">
-      <h2>Over mij</h2>
-      <p>
-        Ik ben een creatieve professional met een passie voor design, technologie en mensen helpen hun visie tot leven te brengen.
-      </p>
-    </div>
-    <div class="image-block">
-      <img src="afbeelding-over-mij.jpg" alt="Over mij afbeelding" />
-    </div>
-  </section>
+  </div>
+  <div class="image-block">
+    <img src="afbeelding-over-mij.jpg" alt="Over mij afbeelding" />
+  </div>
+</section>
 
 <section id="diensten" class="reverse">
   <div class="text-block">
@@ -210,20 +219,19 @@ nav {
   </div>
 </section>
 
+<section id="contact">
+  <div class="text-block">
+    <h2>Contact</h2>
+    <p>
+      Je kunt me bereiken via e-mail op <strong>voorbeeld@email.nl</strong> of via het contactformulier op deze pagina.
+    </p>
+  </div>
+  <div class="image-block">
+    <img src="afbeelding-contact.jpg" alt="Contact afbeelding" />
+  </div>
+</section>
 
-  <section id="contact">
-    <div class="text-block">
-      <h2>Contact</h2>
-      <p>
-        Je kunt me bereiken via e-mail op <strong>voorbeeld@email.nl</strong> of via het contactformulier op deze pagina.
-      </p>
-    </div>
-    <div class="image-block">
-      <img src="afbeelding-contact.jpg" alt="Contact afbeelding" />
-    </div>
-  </section>
-
-  <section id="inspiratiebronnen" class="reverse">
+<section id="inspiratiebronnen" class="reverse">
   <div class="text-block">
     <h2>Inspiratiebronnen</h2>
     <p>
@@ -241,9 +249,6 @@ nav {
   });
 </script>
 
-
-
-  
 </body>
 </html>
 
