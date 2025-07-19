@@ -1,113 +1,99 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Talent 2 Teamcoach</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #7EB2A3;
-      padding: 0px 0;
-      z-index: 1000;
-    }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-    }
+        .logo, .header-image {
+            height: 50px;
+            width: auto;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+        nav {
+            display: flex;
+            gap: 30px;
+        }
 
-    nav a:hover {
-      color: #006E76;
-    }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-    section {
-      padding: 100px 20px;
-      min-height: 100vh;
-    }
+        section {
+            padding: 100px 20px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-    #beginscherm {
-      background-color: #000000;
-    }
+        section:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
-    #about {
-      background-color: #778da9;
-      color: white;
-    }
+        h2 {
+            margin-top: 0;
+        }
 
-    #services1 {
-      background-color: #415a77;
-      color: white;
-    }
-
-    #services2 {
-      background-color: #415a77;
-      color: white;
-    }
-
-    #services3 {
-      background-color: #415a77;
-      color: white;
-    }
-
-    h1, h2 {
-      margin-top: 0;
-    }
-
-    .spacer {
-      height: 80px; /* ruimte onder de navbar */
-    }
-  </style>
+        .spacer {
+            height: 80px;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <img src="logotalent2teamcoach.png" alt="logo" width="350" height="122,5">
-      <a href="#about">Over Mij</a>
-      <a href="#services1">Diensten</a>
-      <a href="#services2">Contact</a>
-      <a href="#services3">Inspiratiebronnen</a>
-    </nav>
-  </header>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <nav>
+            <a href="#over-mij">Over mij</a>
+            <a href="#diensten">Diensten</a>
+            <a href="#contact">Contact</a>
+            <a href="#inspiratiebronnen">Inspiratiebronnen</a>
+        </nav>
+        <img src="header-afbeelding.png" alt="Header Afbeelding" class="header-image">
+    </header>
 
-  <div class="spacer"></div>
+    <div class="spacer"></div> <!-- ruimte voor vaste header -->
 
-  <section id="beginscherm">
-    <h1>Welkom bij Coach voor Coaches</h1>
-    <p>Ik help sportcoaches om het beste uit hun team te halen, door middel van coaching, training en strategie.</p>
-  </section>
+    <section id="over-mij">
+        <h2>Over mij</h2>
+        <p>Welkom! Ik ben een creatieve professional met een passie voor design, technologie en mensen helpen hun visie tot leven te brengen.</p>
+    </section>
 
-  <section id="about">
-    <h2>Over Mij</h2>
-    <p>Met meer dan 10 jaar ervaring in de sportwereld help ik coaches met het ontwikkelen van hun leiderschap, communicatie en teamdynamiek.</p>
-  </section>
+    <section id="diensten">
+        <h2>Diensten</h2>
+        <p>Ik bied diverse diensten aan zoals webdesign, branding en strategisch advies. Neem contact op voor een op maat gemaakt voorstel.</p>
+    </section>
 
-  <section id="services">
-    <h2>Diensten</h2>
-    <ul>
-      <li>1-op-1 coaching voor sportcoaches</li>
-      <li>Workshops over teamontwikkeling</li>
-      <li>Analyse en begeleiding bij teamprestaties</li>
-    </ul>
-  </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Je kunt me bereiken via e-mail op <strong>voorbeeld@email.nl</strong> of via het contactformulier op deze pagina.</p>
+    </section>
+
+    <section id="inspiratiebronnen">
+        <h2>Inspiratiebronnen</h2>
+        <p>Mijn inspiratie haal ik uit kunst, natuur, technologie en de verhalen van anderen. Ik deel hier regelmatig mijn favoriete bronnen.</p>
+    </section>
 
 </body>
 </html>
+
